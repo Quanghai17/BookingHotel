@@ -43,7 +43,7 @@
                    </h2>
                 </div>
                 <div class="bd-restaurant-opening__btn">
-                   <a href="booking-form.html" class="bd-btn">book our hotel now<span><i
+                   <a href="" class="bd-btn">book our hotel now<span><i
                             class="fa-regular fa-arrow-right-long"></i></span></a>
                 </div>
              </div>
@@ -79,7 +79,7 @@
 
 
  <!-- facility slider area start here  -->
- <section class="bd-facility-slider-area pt-150 pb-75 p-relative fix">
+ {{-- <section class="bd-facility-slider-area pt-150 pb-75 p-relative fix">
     <div class="bd-facility-side__shape-wrap">
        <div class="bd-facility-side__shape-1">
           <img src="assets/img/shape/facility-slide-1.png" alt="image not found">
@@ -258,7 +258,7 @@
           </div>
        </div>
     </div>
- </section>
+ </section> --}}
  <!-- facility slider area end here  -->
 
   <!-- foodmenu area start here  -->

@@ -74,10 +74,17 @@
                                     </div>
                                 </div>
                             </div>
+                            @if (Auth::check())
                             <div class="bd-room__btn">
-                                <a href="{{route('booking')}}"><span>{{__('Book Now')}}</span> <i
-                                        class="fa-regular fa-arrow-right-long"></i></a>
-                            </div>
+                             <a href="{{ route('booking') }}"><button type="submit">{{ __('Book Now') }} <i
+                                         class="fa-regular fa-arrow-right-long"></i></button></a>
+                             </div>
+                            @else
+                            <div class="bd-room__btn">
+                             <a href="{{ route('login') }}"><button type="submit">{{ __('Book Now') }} <i
+                                         class="fa-regular fa-arrow-right-long"></i></button></a>
+                             </div>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -111,7 +118,7 @@
     <!-- feature area end here  -->
 
      <!-- booking area start here  -->
-     <section class="bd-booking-area p-relative pt-150 pb-150">
+     {{-- <section class="bd-booking-area p-relative pt-150 pb-150">
         <div class="bd-booking__bg" data-background="assets/img/bg/booking-bg.jpg"></div>
         <div class="bd-booking-form-area-2">
            <div class="container">
@@ -192,7 +199,7 @@
               </div>
            </div>
         </div>
-     </section>
+     </section> --}}
      <!-- booking area end here  -->
 
 @stop

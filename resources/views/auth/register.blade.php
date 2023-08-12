@@ -14,10 +14,10 @@
                          <img src="assets/img/breadcrumb/breadcrumb-bg.png" alt="breadcrumb img">
                       </div>
                       <div class="bd-breadcrumb__content text-center">
-                         <h1 class="bd-breadcrumb__title mb-20">Register</h1>
+                         <h1 class="bd-breadcrumb__title mb-20">{{__('Register')}}</h1>
                          <div class="bd-breadcrumb__list">
-                            <span><a href="index.html">home</a></span>
-                            <span>Register</span>
+                            <span><a href="#">{{__('Home')}}</a></span>
+                            <span>{{__('Register')}}</span>
                          </div>
                       </div>
                    </div>
@@ -36,10 +36,9 @@
                     <div class="row">
                         <div class="page-login pagecustome clearfix">
                             <div class="wpx">
-                                <h1 class="title_heads a-center"><span>Register</span></h1>
-                                <span class="block a-center dkm margin-top-10">Đã có tài khoản, đăng nhập <a
-                                        href="login.html" class="btn-link-style btn-register">tại
-                                        đây</a></span>
+                                <h1 class="title_heads a-center"><span>{{__('Register')}}</span></h1>
+                                <span class="block a-center dkm margin-top-10"> <a
+                                        href="{{ route('login') }}" class="btn-link-style btn-register">{{__('Log In')}}</a></span>
                                 <div id="login" class="section">
                                     <form method="post"  action="{{ route('register') }}"  id="customer_register" accept-charset="UTF-8">
                                         @csrf
@@ -49,7 +48,7 @@
                                                     <fieldset class="form-group" style="margin-top: 20px">
                                                         <input type="text"
                                                             class="form-control form-control-lg" value=""
-                                                            name="name"  placeholder="Họ và Tên"
+                                                            name="name"  placeholder="{{__('Name')}}"
                                                             required>
                                                     </fieldset>
                                                 </div>
@@ -64,20 +63,12 @@
                                                             required="">
                                                     </fieldset>
                                                 </div>
-                                                {{-- <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                                                    <fieldset class="form-group">
-                                                        <input placeholder="Số điện thoại" type="text"
-                                                            pattern="\d+"
-                                                            class="form-control form-control-comment form-control-lg"
-                                                            name="PhoneNumber" Required>
-                                                    </fieldset>
-                                                </div> --}}
                                                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                                                     <fieldset class="form-group" style="margin-top: 20px">
                                                         <input type="password"
                                                             class="form-control form-control-lg" value=""
                                                             name="password" id="password"
-                                                            placeholder="Mật khẩu" required>
+                                                            placeholder="{{__('Password')}}" required>
                                                     </fieldset>
                                                 </div>
                                                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -85,13 +76,13 @@
                                                         <input type="password"
                                                             class="form-control form-control-lg" value=""
                                                             name="password_confirmation" id="password"
-                                                            placeholder="Nhập lại mật khẩu" required>
+                                                            placeholder="{{__('Password Confirmation')}}" required>
                                                     </fieldset>
                                                 </div>
                                             </div>
                                             <div class="section">
                                                 <button type="submit" value="Đăng ký"
-                                                    class="btn  btn-style btn_50">Đăng ký</button>
+                                                    class="btn  btn-style btn_50">{{__('Register')}}</button>
                                             </div>
                                         </div>
                                     </form>

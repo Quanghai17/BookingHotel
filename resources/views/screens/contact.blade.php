@@ -95,7 +95,7 @@
     <!-- contact area end here  -->
 
     <!-- testimonial area start here  -->
-    <section class="bd-testimonial-area-2 p-relative pt-150 pb-150">
+    {{-- <section class="bd-testimonial-area-2 p-relative pt-150 pb-150">
        <div class="bd-testimonial-2__bg" data-background="assets/img/bg/testimonial-bg.jpg"></div>
        <div class="container">
           <div class="bd-testimonial-2__section-title mb-35 mmb-10">
@@ -243,7 +243,7 @@
              </div>
           </div>
        </div>
-    </section>
+    </section> --}}
     <!-- testimonial area end here  -->
 
     <!-- brand area start here  -->

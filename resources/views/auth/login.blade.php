@@ -14,10 +14,10 @@
                          <img src="assets/img/breadcrumb/breadcrumb-bg.png" alt="breadcrumb img">
                       </div>
                       <div class="bd-breadcrumb__content text-center">
-                         <h1 class="bd-breadcrumb__title mb-20">Login</h1>
+                         <h1 class="bd-breadcrumb__title mb-20">{{__('Log In')}}</h1>
                          <div class="bd-breadcrumb__list">
-                            <span><a href="index.html">home</a></span>
-                            <span>Login</span>
+                            <span><a href="">{{__('Home')}}</a></span>
+                            <span>{{__('Log In')}}</span>
                          </div>
                       </div>
                    </div>
@@ -36,7 +36,7 @@
                     <div class="row">
                         <div class="page-login pagecustome clearfix">
                             <div class="wpx">
-                                <h1 class="title_heads a-center"><span>Login</span></h1>
+                                <h1 class="title_heads a-center"><span>{{__('Log In')}}</span></h1>
                                 <div id="login" class="section">
                                     <form method="post" action="{{ route('login') }}"
                                         id="customer_login" accept-charset="UTF-8"><input name="FormType"
@@ -60,13 +60,13 @@
                                             </fieldset>
                                             <div class="pull-xs-left">
                                                 <input class="btn btn-style btn_50" type="submit"
-                                                    value="Đăng nhập" />
+                                                    value="{{__('Log In')}}" />
                                             </div>
                                             <div class="btn_boz_khac">
                                                 <div class="btn_khac">
-                                                    <span class="quenmk">Quên mật khẩu?</span>
-                                                    <a  class="btn-link-style btn-register"
-                                                        title="Đăng ký tại đây">Đăng ký tại đây</a>
+                                                    {{-- <span class="quenmk">Quên mật khẩu?</span> --}}
+                                                    <a href="{{ route('register') }}" class="btn-link-style btn-register"
+                                                        title="Đăng ký tại đây">{{__('Register')}}</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -45,26 +45,48 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div class="bd-header__bottom-right d-flex justify-content-end align-items-center">
-                            <div class="bd-header-top-btn mr-30 d-none d-md-flex">
-                                <a href="{{ route('booking') }}" class="bd-btn fill-btn">
-                                    {{__('Book Now')}} <span><i class="fa-regular fa-arrow-right-long"></i></span>
-                                </a>
-                            </div>
-                            <div class="bd-header-hamburger offcanvas-open-btn d-xl-none">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
+                        <div class="bd-main-menu d-lg-flex align-items-center is-white">
+                            <nav id="mobile-menu">
+                                <ul>
+                                    @if (Auth::check())
+                                        <li class="has-dropdown">
+                                            <a href="#">{{__('Account')}}</a>
+                                            <ul class="submenu">
+                                                <li><a href="">{{ Auth::user()->name }}</a></li>
+                                                <form method="POST" action="{{ route('logout') }}">
+                                                    @csrf
+                                                    <li><a href="route('logout')"
+                                                            onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                                            {{__('Log out')}}
+                                                        </a>
+                                                    </li>
+                                                </form>
+                                            </ul>
+                                        </li>
+                                    @else
+                                        <li>
+                                            <a href="{{ route('login') }}">{{__('Log In')}}</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('register') }}">{{__('Register')}}</a>
+                                        </li>
+                                    @endif
+                                </ul>
+                            </nav>
                         </div>
+
                         <div class="bd-header__bottom-right d-flex justify-content-end align-items-center">
                             <div class="bd-header-lang d-none d-xl-flex">
                                 <div class="bd-header-lang__item">
-                                    <a class="@if (App::getLocale() == 'en') active @else inactive  @endif" style="color: #eec78c;border: 1px solid #eec78c;"
+                                    <a class="@if (App::getLocale() == 'en') active @else inactive @endif"
+                                        style="color: #eec78c;border: 1px solid #eec78c;"
                                         href="{{ route('lang', 'en') }}">en</a>
                                 </div>
                                 <div class="bd-header-lang__item">
-                                    <a class="@if (App::getLocale() == 'vi') active @else inactive @endif" href="{{ route('lang', 'vi') }}" style="color: #eec78c;border: 1px solid #eec78c;">vi</a>
+                                    <a class="@if (App::getLocale() == 'vi') active @else inactive @endif"
+                                        href="{{ route('lang', 'vi') }}"
+                                        style="color: #eec78c;border: 1px solid #eec78c;">vi</a>
                                 </div>
                             </div>
                         </div>
