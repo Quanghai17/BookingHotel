@@ -164,10 +164,10 @@
                                     <div class="bd-booking-3__price">
                                         <p>
                                             <i class="flaticon-group"></i>
-                                            <span>For 2 Adults</span>
+                                            <span> 2 {{__('Adults')}}</span>
                                         </p>
                                         <p>
-                                            <span>{{ $room->price }}</span>/ {{ __('Night') }}
+                                            <span>{{ number_format($room->price) }}</span>/ {{ __('Night') }}
                                         </p>
                                     </div>
 
@@ -175,8 +175,8 @@
                                 <div class="bd-booking-3__list">
                                     <ul>
                                         <li><i class="flaticon-check-circle"></i>1 King bed or 2 Twin Bed(s)</li>
-                                        <li><i class="flaticon-check-circle"></i>538 sq.ft</li>
-                                        <li><i class="flaticon-check-circle"></i>Garden View</li>
+                                        {{-- <li><i class="flaticon-check-circle"></i>538 sq.ft</li>
+                                        <li><i class="flaticon-check-circle"></i>Garden View</li> --}}
                                     </ul>
                                 </div>
                                 @if (Auth::check())
@@ -192,7 +192,7 @@
                                 @endif
                                 
                             </div>
-                            <div class="bd-booking-3-info ">
+                            {{-- <div class="bd-booking-3-info ">
                                 <h3 class="bd-booking-3__title">Extra Services</h3>
                                 <div class="bd-booking-3__list">
                                     <ul>
@@ -202,7 +202,7 @@
                                         <li><i class="flaticon-check-circle"></i>Spa & Message</li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

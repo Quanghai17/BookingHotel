@@ -1,4 +1,5 @@
 {
+  "Visit Free Tour" : "Tham quan miễn phí",
   "Password Confirmation" : "Nhập lại mật khẩu",
   "Password": "Mật khẩu",
   "Account" : "Tài khoản",
@@ -67,5 +68,6 @@
   "Meetings": "Hội thảo",
   "Success": "Thành công",
   "Error": "Thất bại",
-  "Something went wrong, please try again later!": "Có một lỗi gì đó đã xảy ra, vui lòng thử lại sau!"
+  "Something went wrong, please try again later!": "Có một lỗi gì đó đã xảy ra, vui lòng thử lại sau!",
+  "We are here for you, visit us for free. We have the best hotel in town. Theking hotel is not only a hotel it's a kingdom." : "Chúng tôi ở đây vì bạn, hãy ghé thăm chúng tôi miễn phí. Chúng tôi có khách sạn tốt nhất trong thị trấn. Khách sạn Theking không chỉ là một khách sạn mà còn là một nơi nghỉ dưỡng."
 }

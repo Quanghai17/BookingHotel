@@ -25,9 +25,7 @@
     </div>
  </section>
  <!-- breadcrumb area end here  -->
-
-
-
+ 
  <!-- booking form area starts here -->
  <section class="bd-booking-area x-clip pb-85 mpb-15">
    <div class="container">
@@ -39,11 +37,11 @@
                 <input type="hidden" value="dat-phong" name="status">
                   <div class="bd-booking-4__form">
                      <div class="bd-booking-4__input mb-15">
-                        <input type="text" placeholder="{{__('Name')}}" name="name">
+                        <input type="text" placeholder="{{__('Name')}}" name="name" value="{{ Auth::user()->name }}">
                      </div>
                      
                      <div class="bd-booking-4__input mb-15">
-                        <input type="email" placeholder="Email" name="email">
+                        <input type="email" placeholder="Email" name="email" value="{{ Auth::user()->email }}">
                      </div>
                      <div class="bd-booking-4__input mb-15">
                         <input type="text" placeholder="{{__('Phone')}}" name="phone">
@@ -99,41 +97,16 @@
          </div>
          <div class="col-lg-4">
             <div class="bd-booking-sidebar-wrap fix mb-35">
-               <div class="bd-booking-sidebar mb-45">
-                  <div class="bd-booking-sidebar__content">
-                     <h3 class="bd-booking-sidebar__title">Booking Details</h3>
-                     <p>
-                        A Luxury Hotel is considered a hotel that provides a luxurious accommodation
-                        experience
-                        to
-                        the
-                        guest. There are no set with standards (such as stars) for luxury hotels.
-                     </p>
-                  </div>
-               </div>
+               
                <div class="bd-booking-sidebar mb-30">
                   <div class="bd-booking-sidebar__content">
-                     <h3 class="bd-booking-sidebar__title">Need Any Help</h3>
+                     <h3 class="bd-booking-sidebar__title">{{__('Visit Free Tour')}}</h3>
                      <p>
-                        If you need any help to book your room. Our support team is ready for you 24/7 days.
-                     </p>
-                     <div class="bd-booking-sidebar__contact">
-                        <span><i class="fa-solid fa-phone"></i> Call Us:</span>
-                        <a href="tel:99411123456"> 994 1112 3456</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="bd-booking-sidebar mb-30">
-                  <div class="bd-booking-sidebar__content">
-                     <h3 class="bd-booking-sidebar__title">Visit Free Tour</h3>
-                     <p>
-                        We are here for you, visit us for free. We have the best hotel in town. Royel hotel
-                        is
-                        not only a hotel it's a kingdom.
+                       {{__('We are here for you, visit us for free. We have the best hotel in town. Theking hotel is not only a hotel it is a kingdom.')}}
                      </p>
                      <div class="bd-booking-side-btn mt-20">
                         <a href="{{route('contact')}}" class="bd-btn dark-btn">
-                           Contact us<span><i class="fa-regular fa-arrow-right-long"></i></span>
+                           {{__('Contact')}}<span><i class="fa-regular fa-arrow-right-long"></i></span>
                         </a>
                      </div>
                   </div>

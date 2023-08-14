@@ -374,10 +374,21 @@
                                                 <h4 class="bd-offer__title"><a href="offer-details.html">{{$offer->translate()->title}}</a>
                                                 </h4>
                                                 <p>{{$offer->translate()->desc}}</p>
-                                                <div class="bd-offer__btn">
+                                                {{-- <div class="bd-offer__btn">
                                                     <a href="{{route('book')}}">{{__('Book Now')}}<i
                                                             class="fa-regular fa-angle-right"></i></a>
-                                                </div>
+                                                </div> --}}
+                                                @if (Auth::check())
+                                                <div class="bd-offer__btn">
+                                                 <a href="{{ route('booking') }}"><button type="submit">{{ __('Book Now') }} <i
+                                                             class="fa-regular fa-arrow-right-long"></i></button></a>
+                                                 </div>
+                                                @else
+                                                <div class="bd-offer__btn">
+                                                 <a href="{{ route('login') }}"><button type="submit">{{ __('Book Now') }} <i
+                                                             class="fa-regular fa-arrow-right-long"></i></button></a>
+                                                 </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
