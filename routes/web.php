@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Exports\CustomerExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +35,10 @@ Route::get('/posts/{slug}', [\App\Http\Controllers\PostController::class , 'show
 Route::get('/search',[\App\Http\Controllers\PostController::class , 'search'])->name('search');
 
 Route::get('/greeting/{locale}', [\App\Http\Controllers\LanguageController::class, 'changeLanguage'])->name('lang');
+
+Route::get('customers/export', function () {
+    return Excel::download(new CustomerExport, 'customers.xlsx');
+});
 
 
 require __DIR__.'/auth.php';
